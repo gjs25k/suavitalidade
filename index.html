@@ -192,10 +192,10 @@
             margin-bottom: 5px;
         }
 
-        /* Estilos atualizados do preço */
+        /* Estilos atualizados do preço com parcelamento */
         .price-box {
-            margin-top: 20px;
-            line-height: 1.2;
+            margin-top: 25px;
+            line-height: 1.3;
         }
 
         .old-price {
@@ -203,10 +203,18 @@
             color: #a9a09e;
             text-decoration: line-through;
             font-weight: 400;
+            display: block;
         }
 
-        .new-price {
-            font-size: 22px;
+        .new-price-cash {
+            font-size: 18px;
+            color: var(--text-main);
+            display: block;
+            margin-top: 2px;
+        }
+
+        .installments {
+            font-size: 24px;
             font-weight: 700;
             color: var(--heading-color);
             display: block;
@@ -371,10 +379,11 @@
                 <span>💌 Um guia prático em formato digital. Comece a ler em menos de 2 minutos.</span>
             </div>
             
-            <!-- Preço Atualizado com Ancoragem -->
+            <!-- Preço Atualizado com Parcelamento em Destaque -->
             <div class="price-box">
                 <span class="old-price">De R$ 167,90</span>
-                <span class="new-price">Por apenas R$ 97,00</span>
+                <span class="installments">Por até 6x de R$ 18,58</span>
+                <span class="new-price-cash">ou R$ 97,00 à vista</span>
             </div>
         </section>
 

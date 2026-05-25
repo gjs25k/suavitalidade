@@ -17,9 +17,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
+        /* Deslizamento suave ao clicar nos links internos */
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Variáveis de Cores (Paleta Elegante e Acolhedora) */
         :root {
-            --bg-color: #fdfbf9;
+            --page-bg: #f5f2ee; /* Creme suave para o fundo de trás da tela */
+            --container-bg: #fdfcfb; /* Off-white muito sutil para o bloco de conteúdo */
             --text-main: #4a413f; 
             --heading-color: #6d4b43; 
             --accent-color: #b56c60; 
@@ -37,7 +43,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
+            background-color: var(--page-bg);
             color: var(--text-main);
             line-height: 1.6;
             font-size: 17px;
@@ -49,10 +55,14 @@
             line-height: 1.3;
         }
 
+        /* Container principal com sombra leve para não cansar a vista */
         .container {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            margin: 40px auto;
+            padding: 50px 40px;
+            background-color: var(--container-bg);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            border-radius: 12px;
         }
 
         /* Seção do Gancho */
@@ -221,11 +231,12 @@
         /* Seção Final CTA */
         .cta-section {
             text-align: center;
-            margin: 60px 0 40px;
+            margin: 60px 0 20px;
             padding: 50px 30px;
             background-color: #ffffff;
             border-radius: 16px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-light);
         }
 
         .microcopy {
@@ -290,7 +301,15 @@
             line-height: 1.4;
         }
 
-        /* Responsividade para Desktop */
+        /* Responsividade para Desktop/Mobile */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px auto;
+                padding: 40px 20px;
+                border-radius: 8px;
+            }
+        }
+
         @media (min-width: 768px) {
             .main-headline {
                 font-size: 42px;
@@ -302,6 +321,14 @@
     </style>
 </head>
 <body>
+
+    <!-- SCRIPT PARA VOLTAR AO TOPO NO REFRESH -->
+    <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+    </script>
 
     <div class="container">
         
@@ -333,9 +360,9 @@
                 <p style="margin-bottom: 0;">Existe uma mentira que circula silenciosamente sobre a mulher a partir dos 45 anos: a de que, após a menopausa, a energia vai embora, o metabolismo "morre" e o prazer se torna coisa do passado. Isso é uma injustiça com a sua biologia.</p>
             </div>
 
-            <!-- MICRO-CTA 1 -->
+            <!-- MICRO-CTA 1 (Desliza para a oferta) -->
             <div class="micro-cta-container">
-                <a href="https://pay.cakto.com.br/34sdorj_876248" class="btn btn-secondary">✔ Quero entender como recuperar minha vitalidade</a>
+                <a href="#oferta-final" class="btn btn-secondary">✔ Quero entender como recuperar minha vitalidade</a>
             </div>
 
             <p>O que você está vivendo não é falta de força de vontade. Não é preguiça. Não é "idade".</p>
@@ -407,9 +434,9 @@
             </div>
         </section>
 
-        <!-- MICRO-CTA 2 -->
+        <!-- MICRO-CTA 2 (Desliza para a oferta) -->
         <div class="micro-cta-container">
-            <a href="https://pay.cakto.com.br/34sdorj_876248" class="btn btn-secondary">✔ Quero aplicar os 8 pilares na minha rotina</a>
+            <a href="#oferta-final" class="btn btn-secondary">✔ Quero aplicar os 8 pilares na minha rotina</a>
         </div>
 
         <!-- FUTURE PACING E BENEFÍCIOS -->
@@ -433,9 +460,9 @@
             </ul>
         </section>
 
-        <!-- MICRO-CTA 3 -->
+        <!-- MICRO-CTA 3 (Desliza para a oferta) -->
         <div class="micro-cta-container">
-            <a href="https://pay.cakto.com.br/34sdorj_876248" class="btn btn-secondary">✔ Quero voltar a me sentir eu mesma</a>
+            <a href="#oferta-final" class="btn btn-secondary">✔ Quero voltar a me sentir eu mesma</a>
         </div>
 
         <section>
@@ -445,7 +472,8 @@
         </section>
 
         <!-- CALL TO ACTION FINAL E EMPILHAMENTO DE VALOR -->
-        <section class="cta-section">
+        <!-- O id="oferta-final" é a âncora para onde os botões menores deslizam -->
+        <section id="oferta-final" class="cta-section">
             <h2 style="margin-bottom: 15px;">O caminho de volta está pronto para você.</h2>
             <p>Você já deu o primeiro passo ao olhar para si mesma e responder àquelas perguntas. Agora, o mapa está desenhado. Sem pressa. Sem julgamentos. Apenas com informação honesta e um caminho claro.</p>
             

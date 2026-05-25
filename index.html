@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Resgate da Vitalidade e Libido 45+</title>
+    
+    <!-- Importando as fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* Variáveis de Cores (Paleta Elegante e Acolhedora) */
+        :root {
+            --bg-color: #fdfbf9; /* Off-white muito suave */
+            --text-main: #4a413f; /* Cinza escuro/marrom, menos agressivo que o preto */
+            --heading-color: #6d4b43; /* Terracota escuro */
+            --accent-color: #b56c60; /* Terracota/Rose para botões e destaques */
+            --accent-hover: #9a584d;
+            --card-bg: #ffffff;
+            --border-light: #f0e6e4;
+        }
+
+        /* Resets básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            font-size: 17px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--heading-color);
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Seção do Gancho */
+        .hook-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .pre-headline {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .main-headline {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .sub-headline {
+            font-size: 18px;
+            font-weight: 300;
+            color: #5a514f;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Tipografia do Corpo */
+        p {
+            margin-bottom: 20px;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--heading-color);
+        }
+
+        /* Blocos de Destaque */
+        .guilt-break {
+            background-color: #f7edea;
+            padding: 30px;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 8px 8px 0;
+            margin: 40px 0;
+            font-style: italic;
+        }
+
+        /* Grid dos 8 Pilares */
+        .pillars-section {
+            margin: 50px 0;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .pillar-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-light);
+            transition: transform 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .pillar-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Lista de Benefícios */
+        .benefits-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .benefits-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        .benefits-list li::before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--accent-color);
+        }
+
+        /* Botão e CTA */
+        .cta-section {
+            text-align: center;
+            margin: 60px 0 40px;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 20px 40px;
+            border-radius: 50px;
+            margin: 25px 0 15px;
+            box-shadow: 0 4px 15px rgba(181, 108, 96, 0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+            transform: scale(1.02);
+        }
+
+        .microcopy {
+            font-size: 14px;
+            color: #8c827f;
+            line-height: 1.4;
+        }
+
+        .microcopy span {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Estilos atualizados do preço */
+        .price-box {
+            margin-top: 20px;
+            line-height: 1.2;
+        }
+
+        .old-price {
+            font-size: 15px;
+            color: #a9a09e;
+            text-decoration: line-through;
+            font-weight: 400;
+        }
+
+        .new-price {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--heading-color);
+            display: block;
+            margin-top: 4px;
+        }
+
+        .final-quote {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 22px;
+            color: var(--heading-color);
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        /* Responsividade para Desktop */
+        @media (min-width: 768px) {
+            .main-headline {
+                font-size: 42px;
+            }
+            .pillars-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- HEADER / GANCHO -->
+        <header class="hook-section">
+            <span class="pre-headline">Com base nas suas respostas do quiz…</span>
+            <h1 class="main-headline">Talvez você não tenha perdido a sua essência. O seu corpo apenas deixou de receber o suporte biológico correto para florescer nesta nova fase.</h1>
+            <p class="sub-headline">Entenda por que a fadiga, os calorões e o silêncio do desejo não são o seu "novo normal" — e como a ciência e o seu próprio corpo podem trabalhar juntos para devolver a sua vitalidade.</p>
+        </header>
+
+        <!-- CORPO DA COPY -->
+        <section class="body-content">
+            <p>Você acabou de finalizar o quiz. E se você está lendo esta página agora, é provável que algumas das perguntas tenham tocado em lugares muito profundos.</p>
+            
+            <p>Talvez você tenha se acostumado a acordar já se sentindo exausta, como se o sono não fosse mais suficiente para recarregar suas baterias.</p>
+            
+            <p>Talvez você olhe para o espelho e, embora saiba quem é, sinta que uma parte da sua energia, do seu brilho e da sua disposição simplesmente "desligou".</p>
+            
+            <p>Os calorões que interrompem o seu dia.<br>
+            A irritabilidade que surge do nada.<br>
+            E aquela culpa silenciosa, muitas vezes sentida no relacionamento, por não conseguir mais sentir o desejo e a conexão que um dia foram naturais.</p>
+            
+            <p>Parece que o seu corpo se tornou um ambiente desconhecido.</p>
+            
+            <p>Mas eu preciso que você leia a próxima frase com muita atenção:</p>
+
+            <div class="guilt-break">
+                <h2 style="font-size: 24px; margin-bottom: 15px;">Você não está falhando. E você ainda é — e sempre será — uma mulher inteira.</h2>
+                <p style="margin-bottom: 0;">Existe uma mentira que circula silenciosamente sobre a mulher a partir dos 45 anos: a de que, após a menopausa, a energia vai embora, o metabolismo "morre" e o prazer se torna coisa do passado.</p>
+            </div>
+
+            <p>Isso é uma injustiça com a sua biologia.</p>
+
+            <p>O que você está vivendo não é falta de força de vontade. Não é preguiça. Não é "idade".</p>
+
+            <p>Você está passando por uma <strong>transição hormonal real</strong>.</p>
+
+            <p>Enquanto a maioria fala apenas sobre o estrogênio, o seu corpo está lidando com a queda silenciosa de hormônios fundamentais para a sua força vital — como a <em>Testosterona Feminina</em>, o <em>DHEA</em> e a <em>Ocitocina</em>. Ao mesmo tempo, anos de noites mal dormidas e estresse acumulado elevaram o seu cortisol a níveis que literalmente "engolem" a sua energia.</p>
+
+            <p>O seu corpo não quebrou. Ele apenas mudou o idioma que ele fala. E agora, ele está pedindo suporte de uma maneira diferente.</p>
+
+            <h2 style="margin-top: 40px; margin-bottom: 20px;">O Alívio: Devolvendo o controle para suas mãos</h2>
+
+            <p>É exatamente para traduzir esse novo idioma e devolver o controle para as suas mãos que criamos o:</p>
+
+            <h3 style="font-size: 26px; color: var(--accent-color); text-align: center; margin: 30px 0;">Manual de Resgate da Vitalidade e Libido 45+</h3>
+
+            <p>Este não é um livro de regras rígidas, dietas punitivas ou promessas irreais. É um guia prático, educativo e profundamente respeitoso com o momento que você está vivendo. É o mapa para você se reconectar com a sua própria energia — e com tudo o que vem com ela.</p>
+
+            <p>Nós condensamos a ciência da longevidade feminina e do bem-estar em um protocolo suave, estruturado em <strong>8 Pilares da Vitalidade</strong>.</p>
+
+        </section>
+
+        <!-- OS 8 PILARES -->
+        <section class="pillars-section">
+            <p>Ao invés de tentar atacar um sintoma de cada vez, o Manual ensina como criar um ambiente biológico onde a vitalidade é a única resposta possível. Veja como vamos fazer isso juntas:</p>
+
+            <div class="pillars-grid">
+                
+                <div class="pillar-card">
+                    <h3>🌿 1. Nutrição Pró-Hormonal</h3>
+                    <p>Não é sobre comer menos. É sobre os nutrientes exatos (como zinco, magnésio e ômega-3) que servem de matéria-prima para a produção hormonal, estabilizando a energia e reduzindo a inflamação que drena sua disposição.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <h3>💧 2. Restauração Hídrica Celular</h3>
+                    <p>A base invisível do bem-estar. Como a hidratação correta pela manhã ativa a cascata de energia para todos os seus sistemas corporais.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <h3>✨ 3. Amplificação Botânica</h3>
+                    <p>A ciência por trás de compostos naturais seguros (adaptógenos) que atuam nos receptores hormonais, ajudando a modular o cortisol e a reacender a faísca do desejo de forma orgânica.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <h3>🏃‍♀️ 4. Movimento Bio-Estimulante</h3>
+                    <p>Você não precisa de treinos exaustivos. O Manual revela como movimentos curtos e específicos são os maiores "gatilhos" naturais para a produção de testosterona feminina e endorfinas.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <h3>🌙 5. Arquitetura do Sono</h3>
+                    <p>O sono é quando a verdadeira restauração hormonal acontece. Você aprenderá um ritual simples para baixar o cortisol à noite e permitir que o seu corpo se repare profundamente.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <h3>🧘‍♀️ 6. Modulação do Cortisol</h3>
+                    <p>Técnicas práticas, de poucos minutos diários, para tirar o seu sistema nervoso do "modo de alerta" e criar um espaço seguro para a vitalidade emergir e o estresse dissipar.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <h3>👁️ 7. Reconexão Sensorial</h3>
+                    <p>O desejo não nasce no vácuo. Exercícios guiados e gentis de 5 minutos para você voltar a habitar o seu corpo através dos sentidos, desfazendo o piloto automático do dia a dia.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <h3>💬 8. Intimidade Emocional Segura</h3>
+                    <p>Para a maioria de nós, o desejo começa na cabeça e no coração. Ferramentas delicadas de comunicação para criar segurança, ser vista e dissipar qualquer vergonha.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BENEFÍCIOS -->
+        <section class="benefits-section">
+            <h2 style="margin-bottom: 20px;">A Transformação Suave</h2>
+            <p>O objetivo do Manual não é transformar você na mulher que você era aos 30 anos. O objetivo é fazer você florescer na mulher poderosa e madura que você é hoje.</p>
+            <p>Ao implementar pequenos ajustes no seu dia a dia, de forma gentil e no seu próprio ritmo, você começará a notar:</p>
+
+            <ul class="benefits-list">
+                <li><strong>O retorno da energia limpa:</strong> Acordar com a sensação real de descanso e manter a disposição ao longo da tarde.</li>
+                <li><strong>A paz com o espelho:</strong> Voltar a se reconhecer, sentindo-se confortável e dona da própria pele.</li>
+                <li><strong>O resgate da feminilidade:</strong> Reacender a receptividade ao prazer e ao toque físico, dissolvendo a tensão.</li>
+                <li><strong>Clareza e leveza mental:</strong> A dissipação daquela "névoa mental" e da irritabilidade crônica.</li>
+                <li><strong>Intimidade revitalizada:</strong> Uma nova forma de se relacionar, baseada em autoconfiança, honestidade e conexão real.</li>
+            </ul>
+
+            <h2 style="margin-top: 40px; margin-bottom: 20px;">A menopausa não é o fim de nada. É uma reorganização.</h2>
+            <p>O corpo humano tem uma capacidade notável de se adaptar quando recebe os sinais certos. Como você viu no seu resultado do quiz, ignorar os sinais do seu corpo tem um custo emocional alto.</p>
+            <p>Mas cuidar de si mesma nesta fase é o maior ato de amor-próprio que você pode praticar. Pequenas mudanças de hábitos, validadas pela biologia do corpo feminino, são tudo o que separa o cansaço constante de uma vida com intenção, energia e prazer.</p>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section class="cta-section">
+            <h2 style="margin-bottom: 15px;">O caminho de volta está pronto para você.</h2>
+            <p>Você já deu o primeiro passo ao olhar para si mesma e responder àquelas perguntas. Agora, o mapa está desenhado. Sem pressa. Sem julgamentos. Apenas com informação honesta e um caminho claro.</p>
+            <p>Você não precisa continuar se sentindo "desligada".</p>
+
+            <!-- Lembre-se de colocar o link do checkout no lugar do "#" abaixo -->
+            <a href="#" class="btn">QUERO ACESSAR O MANUAL E RESGATAR MINHA VITALIDADE</a>
+
+            <div class="microcopy">
+                <span>🔒 Acesso imediato e 100% seguro.</span>
+                <span>💌 Um guia prático em formato digital. Comece a ler em menos de 2 minutos.</span>
+            </div>
+            
+            <!-- Preço Atualizado com Ancoragem -->
+            <div class="price-box">
+                <span class="old-price">De R$ 167,90</span>
+                <span class="new-price">Por apenas R$ 97,00</span>
+            </div>
+        </section>
+
+        <div class="final-quote">
+            "A mulher que você está se tornando está esperando pela atenção que você começou a dar a si mesma hoje. Permita que ela exista."
+        </div>
+
+    </div>
+
+</body>
+</html>
